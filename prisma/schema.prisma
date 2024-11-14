@@ -1,0 +1,107 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int      @id @default(autoincrement())
+  username String   @unique
+  password String
+  role     String   @default("user")
+}
+
+model Inquiry {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String
+  createdAt DateTime @default(now())
+}
+
+model Contract {
+  id       Int      @id @default(autoincrement())
+  period   String
+  rent     Int
+  deposit  Int
+  status   String
+  notes    String?
+}
+
+model Notice {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   String
+  createdAt DateTime @default(now())
+}
+model Maintenance {
+  id          Int       @id @default(autoincrement())
+  month       String
+  amount      Int
+  paymentDate DateTime?
+  status      String    @default("pending")
+  details     String?
+  createdAt   DateTime  @default(now())
+}
+
+model RentPayment {
+  id          Int       @id @default(autoincrement())
+  dueDate     DateTime
+  amount      Int
+  paymentDate DateTime?
+  status      String    @default("pending")
+  receipt     String?
+  createdAt   DateTime  @default(now())
+}
+model Admin {
+  id        String      @id @default(cuid())
+  email     String      @unique
+  password  String
+  name      String
+  role      AdminRole   @default(MEMBER)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  edits     ContentEdit[]
+}
+
+model ContentEdit {
+  id           String    @id @default(cuid())
+  adminId      String
+  admin        Admin     @relation(fields: [adminId], references: [id])
+  contentType  String
+  contentId    String
+  action       String
+  previousData Json
+  newData      Json
+  createdAt    DateTime  @default(now())
+}
+
+enum AdminRole {
+  OWNER
+  MEMBER
+}
+
+model Facility {
+  id          String    @id @default(cuid())
+  title       String
+  description String
+  imageUrl    String?
+  order       Int
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Tenant {
+  id          String    @id @default(cuid())
+  name        String
+  specialty   String
+  floor       Int
+  doctor      String
+  hours       String
+  phone       String
+  imageUrl    String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
