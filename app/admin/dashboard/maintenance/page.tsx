@@ -99,7 +99,7 @@ export default async function AdminMaintenancePage() {
                   <TableCell>{payment.dueDate}</TableCell>
                   <TableCell>
                     <span className={`px-2 py-1 rounded-full text-xs ${
-                      payment.status === "완료" ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"
+                      (payment.status as any) === "완료" ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"
                     }`}>
                       {payment.status}
                     </span>
@@ -109,7 +109,7 @@ export default async function AdminMaintenancePage() {
                       <Link href={`/admin/dashboard/maintenance/${payment.id}`}>
                         <Button variant="outline" size="sm">상세보기</Button>
                       </Link>
-                      {payment.status !== "완료" && (
+                      {(payment.status as any) !== "완료" && (
                         <MaintenanceConfirmForm maintenanceId={payment.id} />
                       )}
                     </div>

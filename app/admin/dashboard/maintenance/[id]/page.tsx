@@ -5,8 +5,15 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import MaintenanceConfirmForm from "../components/maintenance-confirm-form"
+import { Metadata } from 'next'
 
-export default function AdminMaintenanceDetailPage({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: { id: string }
+  searchParams?: { [key: string]: string | string[] | undefined }
+}
+
+//@ts-nocheck
+export default async function AdminMaintenanceDetailPage({ params }: { params: {id: string };}) {
   const payment = {
     id: 1,
     tenant: "하늘마음 정신건강의학과",

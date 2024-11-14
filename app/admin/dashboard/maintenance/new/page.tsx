@@ -12,25 +12,25 @@ export default function AdminMaintenanceCreatePage() {
             <ArrowLeft className="h-4 w-4" />
           </Button>
         </Link>
-        <h1 className="text-2xl font-bold text-gray-900">°ü¸®ºñ Ã»±¸¼­ ¹ßÇà</h1>
+        <h1 className="text-2xl font-bold text-gray-900">ê´€ë¦¬ë¹„ ë°œí–‰</h1>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>»õ °ü¸®ºñ Ã»±¸¼­</CardTitle>
+          <CardTitle>ê´€ë¦¬ë¹„ ë°œí–‰</CardTitle>
         </CardHeader>
         <CardContent>
           <form className="space-y-6">
             <div className="grid grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label className="text-sm font-medium">Ã»±¸ ¿ù</label>
+                <label className="text-sm font-medium">ê´€ë¦¬ë¹„ ë°œí–‰ ê¸°ê°„</label>
                 <input
                   type="month"
                   className="w-full p-2 border rounded-md"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium">³³ºÎ ±âÇÑ</label>
+                <label className="text-sm font-medium">ê´€ë¦¬ë¹„ ë°œí–‰ ë‚ ì§œ</label>
                 <input
                   type="date"
                   className="w-full p-2 border rounded-md"
@@ -39,20 +39,20 @@ export default function AdminMaintenanceCreatePage() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium">ÀÓÂ÷ÀÎ ¼±ÅÃ</label>
+              <label className="text-sm font-medium">ê´€ë¦¬ë¹„ ë°œí–‰ ì¢…ë¥˜</label>
               <select className="w-full p-2 border rounded-md">
-                <option value="">ÀÓÂ÷ÀÎÀ» ¼±ÅÃÇÏ¼¼¿ä</option>
-                <option value="ÇÏ´Ã¸¶À½ Á¤½Å°Ç°­ÀÇÇÐ°ú">ÇÏ´Ã¸¶À½ Á¤½Å°Ç°­ÀÇÇÐ°ú (3Ãþ)</option>
-                <option value="¸¼Àº´« ¾È°ú">¸¼Àº´« ¾È°ú (4Ãþ)</option>
-                <option value="Æ°Æ° Á¤Çü¿Ü°ú">Æ°Æ° Á¤Çü¿Ü°ú (5Ãþ)</option>
+                <option value="">ê´€ë¦¬ë¹„ ë°œí–‰ ì¢…ë¥˜ë¥¼ ì„ íƒí•˜ì„¸ìš”</option>
+                <option value="ê´€ë¦¬ë¹„ ë°œí–‰ (3ì›”)">ê´€ë¦¬ë¹„ ë°œí–‰ (3ì›”)</option>
+                <option value="ê´€ë¦¬ë¹„ ë°œí–‰ (4ì›”)">ê´€ë¦¬ë¹„ ë°œí–‰ (4ì›”)</option>
+                <option value="ê´€ë¦¬ë¹„ ë°œí–‰ (5ì›”)">ê´€ë¦¬ë¹„ ë°œí–‰ (5ì›”)</option>
               </select>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-sm font-medium">°ü¸®ºñ Ç×¸ñ</h3>
+              <h3 className="text-sm font-medium">ê´€ë¦¬ë¹„ ë°œí–‰ ê¸ˆì•¡</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <label className="text-sm text-gray-600">Àü±â·á</label>
+                  <label className="text-sm text-gray-600">ê´€ë¦¬ë¹„ ë°œí–‰ ê¸ˆì•¡</label>
                   <input
                     type="number"
                     className="w-full p-2 border rounded-md"
@@ -60,7 +60,7 @@ export default function AdminMaintenanceCreatePage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm text-gray-600">¼öµµ·á</label>
+                  <label className="text-sm text-gray-600">ê´€ë¦¬ë¹„ ë°œí–‰ ì´ì•¡</label>
                   <input
                     type="number"
                     className="w-full p-2 border rounded-md"
@@ -68,7 +68,7 @@ export default function AdminMaintenanceCreatePage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm text-gray-600">°¡½ººñ</label>
+                  <label className="text-sm text-gray-600">ê´€ë¦¬ë¹„ ë°œí–‰ ì´ì•¡</label>
                   <input
                     type="number"
                     className="w-full p-2 border rounded-md"
@@ -76,7 +76,7 @@ export default function AdminMaintenanceCreatePage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm text-gray-600">Ã»¼Òºñ</label>
+                  <label className="text-sm text-gray-600">ê´€ë¦¬ë¹„ ë°œí–‰ ì´ì•¡</label>
                   <input
                     type="number"
                     className="w-full p-2 border rounded-md"
@@ -87,8 +87,8 @@ export default function AdminMaintenanceCreatePage() {
             </div>
 
             <div className="flex justify-end gap-x-2">
-              <Button variant="outline">Ãë¼Ò</Button>
-              <Button>Ã»±¸¼­ ¹ßÇà</Button>
+              <Button variant="outline">ì·¨ì†Œ</Button>
+              <Button>ë°œí–‰í•˜ê¸°</Button>
             </div>
           </form>
         </CardContent>

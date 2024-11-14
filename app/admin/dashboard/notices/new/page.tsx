@@ -12,40 +12,40 @@ export default function AdminNoticeCreatePage() {
             <ArrowLeft className="h-4 w-4" />
           </Button>
         </Link>
-        <h1 className="text-2xl font-bold text-gray-900">°øÁö»çÇ× ÀÛ¼º</h1>
+        <h1 className="text-2xl font-bold text-gray-900">ê³µì§€ì‚¬í•­ ìž‘ì„±</h1>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>»õ °øÁö»çÇ×</CardTitle>
+          <CardTitle>ê³µì§€ì‚¬í•­ ìž‘ì„±</CardTitle>
         </CardHeader>
         <CardContent>
           <form className="space-y-6">
             <div className="space-y-2">
-              <label className="text-sm font-medium">Á¦¸ñ</label>
+              <label className="text-sm font-medium">ê³µì§€ì‚¬í•­ ì œëª©</label>
               <input
                 type="text"
                 className="w-full p-2 border rounded-md"
-                placeholder="°øÁö»çÇ× Á¦¸ñÀ» ÀÔ·ÂÇÏ¼¼¿ä"
+                placeholder="ê³µì§€ì‚¬í•­ ì œëª©ì„ ìž…ë ¥í•˜ì„¸ìš”"
               />
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium">´ë»ó</label>
+              <label className="text-sm font-medium">ê³µì§€ì‚¬í•­ ì¢…ë¥˜</label>
               <select className="w-full p-2 border rounded-md">
-                <option value="ÀüÃ¼">ÀüÃ¼</option>
-                <option value="Æ¯Á¤Ãþ">Æ¯Á¤Ãþ</option>
+                <option value="ê³µì§€ì‚¬í•­">ê³µì§€ì‚¬í•­</option>
+                <option value="ì´ë²¤íŠ¸">ì´ë²¤íŠ¸</option>
               </select>
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium">³»¿ë</label>
+              <label className="text-sm font-medium">ê³µì§€ì‚¬í•­ ë‚´ìš©</label>
               <textarea
                 className="w-full h-64 p-2 border rounded-md"
-                placeholder="°øÁö»çÇ× ³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä"
+                placeholder="ê³µì§€ì‚¬í•­ ë‚´ìš©ì„ ìž…ë ¥í•˜ì„¸ìš”"
               />
             </div>
             <div className="flex justify-end gap-x-2">
-              <Button variant="outline">Ãë¼Ò</Button>
-              <Button>ÀÛ¼º ¿Ï·á</Button>
+              <Button variant="outline">ì·¨ì†Œ</Button>
+              <Button>ìž‘ì„±í•˜ê¸°</Button>
             </div>
           </form>
         </CardContent>

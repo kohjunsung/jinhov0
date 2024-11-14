@@ -38,7 +38,11 @@ const maintenanceHistory = [
   }
 ]
 
-export default async function TenantPortalMaintenance() {
+type Props = { 
+  params: { id: string }
+}
+
+export default async function TenantPortalMaintenance({ params }: Props) {
   return (
     <div className="flex h-screen bg-gray-100">
       <aside className="w-64 bg-white shadow-md">
